@@ -1,5 +1,5 @@
-import { Mail, Github, Twitter, Linkedin } from "lucide-react";
-import { mockProfile } from "@/data/mockData";
+import { Mail, Github, Twitter } from "lucide-react";
+import { profile } from "@/data/content";
 
 export function Footer() {
   return (
@@ -9,9 +9,9 @@ export function Footer() {
           {/* プロフィール情報 */}
           <div>
             <h3 className="text-lg mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-bold">
-              {mockProfile.name}
+              {profile.name}
             </h3>
-            <p className="text-gray-400 text-sm">{mockProfile.bio}</p>
+            <p className="text-gray-400 text-sm">{profile.bioShort}</p>
           </div>
 
           {/* 連絡先情報 */}
@@ -19,8 +19,7 @@ export function Footer() {
             <h3 className="text-lg mb-4 font-bold">お問い合わせ</h3>
             <div className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
               <Mail className="w-4 h-4" />
-              {/* mockDataにemailがない場合は追加してください */}
-              <a href={`mailto:${mockProfile.email}`}>{mockProfile.email || "info@example.com"}</a>
+              <a href={`mailto:${profile.email}`}>{profile.email}</a>
             </div>
           </div>
 
@@ -29,7 +28,7 @@ export function Footer() {
             <h3 className="text-lg mb-4 font-bold">SNS</h3>
             <div className="flex gap-4">
               <a
-                href={mockProfile.github}
+                href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -39,31 +38,23 @@ export function Footer() {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href={mockProfile.twitter}
+                href={profile.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">X (Twitter)</span>
                 <Twitter className="w-6 h-6" />
-              </a>
-              <a
-                href={mockProfile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <span className="sr-only">LinkedIn</span>
-                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} {mockProfile.name}. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
