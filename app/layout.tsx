@@ -1,30 +1,44 @@
-// app/layout.tsx
 import type { Metadata } from "next";
-import { Header } from "@/app/components/Header";
-import { Footer } from "@/app/components/Footer";
-import "./globals.css"; // 必要に応じて
+import type { ReactNode } from "react";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "@/hooks/useTheme";
+import { siteMeta } from "@/content/ja";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
-  title: "南口遼河 | Portfolio",
-  description:
-    "南口遼河のポートフォリオサイト。ベトナムインターンでの開発タスク詳細化システム、ハッカソン受賞作など制作物を紹介しています。",
+  title: siteMeta.title,
+  description: siteMeta.description,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const THEME_INIT_SCRIPT = `
+try {
+  var theme = localStorage.getItem('portfolio-theme');
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+} catch (e) {}
+`;
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ja">
-      <body>
-        <div className="min-h-screen flex flex-col bg-gray-50">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
+    <html lang="ja" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

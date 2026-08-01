@@ -1,0 +1,36 @@
+import type { SkillItem } from "@/lib/types";
+
+export const skills = {
+  title: "Tech Stack",
+  subtitle: "設計・実装・運用に使用している技術とツールの一覧です。",
+  items: [
+    { name: "TypeScript", icon: "/images/icons/skills/skill_icon_typescript.svg" },
+    { name: "React", icon: "/images/icons/skills/skill_icon_react.svg" },
+    { name: "Next.js", icon: "/images/icons/skills/skill_icon_nextjs.svg" },
+    { name: "Python", icon: "/images/icons/skills/skill_icon_python.svg" },
+    { name: "FastAPI", icon: "/images/icons/skills/skill_icon_fastapi.svg" },
+    { name: "Tailwind CSS", icon: "/images/icons/skills/skill_icon_tailwind.svg" },
+    { name: "PostgreSQL", icon: "/images/icons/skills/skill_icon_postgresql.svg" },
+    { name: "Docker", icon: "/images/icons/skills/skill_icon_docker.svg" },
+    { name: "Git", icon: "/images/icons/skills/skill_icon_git.svg" },
+  ] satisfies SkillItem[],
+  otherLabel: "Other Tools & Technologies",
+  otherTools: [
+    "JavaScript",
+    "Go",
+    "HTML / CSS",
+    "LangChain",
+    "LangGraph",
+    "OpenAI API",
+    "Google Gemini API",
+    "Flask",
+    "SQLite",
+    "Vite",
+    "shadcn/ui",
+    "Vercel",
+    "Railway",
+    "Hugging Face Spaces",
+    "GitHub",
+    "Claude Code",
+  ],
+};
