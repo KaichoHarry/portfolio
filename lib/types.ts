@@ -31,6 +31,16 @@ export type Project = {
 export type SkillItem = {
   name: string;
   icon: string;
+  years?: string;
+  level?: 1 | 2 | 3 | 4 | 5;
+  description?: string;
+};
+
+export type HeroPersonalItem = {
+  text: string;
+  tone?: CodeLine["tone"];
+  photo: string;
+  caption: string;
 };
 
 export type ContactLink = {
@@ -38,6 +48,7 @@ export type ContactLink = {
   value: string;
   href: string;
   icon: string;
+  invertOnLight?: boolean;
 };
 
 export type AboutProfile = {

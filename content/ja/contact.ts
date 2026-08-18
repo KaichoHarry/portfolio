@@ -20,12 +20,14 @@ export const contact = {
       value: "github.com/KaichoHarry",
       href: "https://github.com/KaichoHarry",
       icon: "/images/icons/contact/contact_icon_github.svg",
+      invertOnLight: true,
     },
     {
       name: "x",
       value: "@yadon_GVK",
       href: "https://x.com/yadon_gvk",
       icon: "/images/icons/contact/contact_icon_x.svg",
+      invertOnLight: true,
     },
   ] satisfies ContactLink[],
 };

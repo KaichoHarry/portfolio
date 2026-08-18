@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { skills } from "@/content/ja";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
@@ -46,25 +47,14 @@ export function Skills() {
           </RevealOnScroll>
         ))}
       </div>
-      <div className="my-11 flex items-center gap-3.5 sm:my-14">
-        <span className="whitespace-nowrap font-mono text-sm text-accent">&gt; {skills.otherLabel}</span>
-        <span
-          className="h-px flex-1"
-          style={{
-            backgroundImage: "repeating-linear-gradient(to right, var(--border) 0 6px, transparent 6px 12px)",
-          }}
-        />
-      </div>
-      <div className="flex flex-wrap gap-2.5">
-        {skills.otherTools.map((tool) => (
-          <span
-            key={tool}
-            className="rounded-md border border-border px-3.5 py-1.5 font-mono text-[13px] text-text-muted"
-          >
-            {tool}
-          </span>
-        ))}
-      </div>
+      <RevealOnScroll delay={150 + skills.items.length * 55} distanceY={24} scale={0.97}>
+        <Link
+          href="/skills"
+          className="mt-11 inline-flex items-center gap-2.5 rounded-lg border border-accent px-6 py-3.5 font-mono text-[15px] text-accent transition-colors hover:bg-accent/10"
+        >
+          &gt; view all skills <span>&#8594;</span>
+        </Link>
+      </RevealOnScroll>
     </section>
   );
 }

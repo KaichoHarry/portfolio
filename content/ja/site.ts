@@ -1,11 +1,11 @@
 import type { NavItem } from "@/lib/types";
 
 export const nav: NavItem[] = [
-  { id: "home", label: "Home", href: "#home" },
-  { id: "about", label: "About", href: "#about" },
-  { id: "works", label: "Works", href: "#works" },
-  { id: "skills", label: "Skills", href: "#skills" },
-  { id: "contact", label: "Contact", href: "#contact" },
+  { id: "home", label: "Home", href: "/" },
+  { id: "about", label: "About", href: "/about" },
+  { id: "works", label: "Works", href: "/works" },
+  { id: "skills", label: "Skills", href: "/skills" },
+  { id: "contact", label: "Contact", href: "/#contact" },
 ];
 
 export const footer = {

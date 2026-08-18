@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <defs>
+    <pattern id="dots-hobby1" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#1c2432" />
+    </pattern>
+  </defs>
+  <rect width="320" height="320" fill="#0d121a" />
+  <rect width="320" height="320" fill="url(#dots-hobby1)" />
+  <rect x="6" y="6" width="308" height="308" fill="none" stroke="#1c2432" stroke-width="2" stroke-dasharray="6 6" />
+  <rect x="90" y="120" width="140" height="100" rx="10" fill="none" stroke="#188eff" stroke-width="4" />
+  <rect x="130" y="100" width="60" height="26" rx="6" fill="none" stroke="#188eff" stroke-width="4" />
+  <circle cx="160" cy="170" r="30" fill="none" stroke="#188eff" stroke-width="4" />
+  <text x="160" y="292" text-anchor="middle" font-family="monospace" font-size="13" fill="#8b96a8">HOBBY PHOTO 1 (仮)</text>
+</svg>

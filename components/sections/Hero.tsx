@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { hero } from "@/content/ja";
-import { CodeWindow } from "@/components/ui/CodeWindow";
-
-const TONE_CLASS: Record<string, string> = {
-  default: "text-text",
-  muted: "text-text-muted",
-  accent: "text-accent",
-  success: "text-[#7ee787]",
-};
+import { HeroPersonalWindow } from "@/components/sections/HeroPersonalWindow";
 
 export function Hero() {
   return (
@@ -77,16 +70,11 @@ export function Hero() {
           height={100}
           className="animate-float-delay pointer-events-none absolute bottom-1 left-0 hidden w-[130px] opacity-95 sm:block md:w-[170px]"
         />
-        <CodeWindow filename="main.js">
-          <div className="overflow-x-auto px-4 py-4 font-mono text-[13px] leading-[1.9] sm:px-5 sm:text-[13.5px]">
-            {hero.codeLines.map((line, i) => (
-              <div key={i} className="whitespace-pre">
-                <span className="inline-block w-5 text-text-muted">{i + 1}</span>
-                <span className={TONE_CLASS[line.tone ?? "default"]}>{line.text}</span>
-              </div>
-            ))}
-          </div>
-        </CodeWindow>
+        <HeroPersonalWindow
+          filename={hero.personalWindowFilename}
+          hint={hero.personalHint}
+          items={hero.personalItems}
+        />
       </div>
     </section>
   );

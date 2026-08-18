@@ -79,3 +79,11 @@ a {
 .deco-image {
   filter: var(--deco-filter);
 }
+
+.icon-invert-on-light {
+  filter: none;
+}
+
+:root[data-theme="light"] .icon-invert-on-light {
+  filter: invert(1);
+}

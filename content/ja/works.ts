@@ -70,10 +70,10 @@ export const works = {
       title: "MyTechPulse",
       meta: "Open Hack U 2025 KANAZAWA",
       summary:
-        "IT技術記事の情報過多による「学習疲れ」を解消するため、クリック履歴から興味関心を推定し、少しずつ新分野へ広げる技術記事パーソナライズサービス。近日公開予定。",
+        "IT技術記事の情報過多による「学習疲れ」を解消するため、クリック履歴から興味関心を推定し、少しずつ新分野へ広げる技術記事パーソナライズサービス。",
       tags: ["HTML/CSS/JS", "Recommendation Algorithm"],
-      links: {},
-      status: "coming-soon",
+      links: { demo: "https://mytechpulse.net/" },
+      status: "public",
     },
   ] satisfies Project[],
 };

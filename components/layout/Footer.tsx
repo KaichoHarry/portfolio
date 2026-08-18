@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { MouseEvent } from "react";
 import { footer } from "@/content/ja";
 
 export function Footer() {
+  const pathname = usePathname();
+
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") return;
     event.preventDefault();
     document.getElementById("home")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -25,9 +30,9 @@ export function Footer() {
       <span className="font-mono text-[13px] text-text-muted">
         &copy; {footer.year} {footer.copyName}. All rights reserved.
       </span>
-      <a href="#home" onClick={handleClick} className="font-mono text-[13px] hover:text-accent">
+      <Link href="/" onClick={handleClick} className="font-mono text-[13px] hover:text-accent">
         &gt; back to top
-      </a>
+      </Link>
     </footer>
   );
 }

@@ -70,7 +70,13 @@ export function Contact() {
                     className="flex items-center gap-4 border-b border-border py-3.5 text-text last:border-b-0"
                   >
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-accent">
-                      <Image src={link.icon} alt={link.name} width={20} height={20} className="h-5 w-5" />
+                      <Image
+                        src={link.icon}
+                        alt={link.name}
+                        width={20}
+                        height={20}
+                        className={`h-5 w-5 ${link.invertOnLight ? "icon-invert-on-light" : ""}`}
+                      />
                     </span>
                     <span>
                       <span className="block font-mono text-[13px] text-accent">{link.name}</span>

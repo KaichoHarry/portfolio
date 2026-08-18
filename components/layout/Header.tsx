@@ -1,17 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { MouseEvent } from "react";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { nav, footer } from "@/content/ja";
 import { ThemeToggle } from "./ThemeToggle";
 
-const SECTION_IDS = nav.map((item) => item.id);
+const ROUTE_IDS = ["about", "works", "skills"];
+const HOME_SCROLL_IDS = ["home", "contact"];
 
 export function Header() {
-  const activeId = useScrollSpy(SECTION_IDS);
+  const pathname = usePathname();
+  const scrollActiveId = useScrollSpy(HOME_SCROLL_IDS);
+  const activeId =
+    pathname === "/" ? scrollActiveId : ROUTE_IDS.find((id) => pathname.startsWith(`/${id}`)) ?? "";
 
   const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (pathname !== "/" || (id !== "home" && id !== "contact")) return;
     event.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -32,7 +39,7 @@ export function Header() {
       </div>
       <nav className="flex items-center gap-4 overflow-x-auto sm:gap-6 md:gap-9">
         {nav.map((item) => (
-          <a
+          <Link
             key={item.id}
             href={item.href}
             onClick={(event) => handleNavClick(event, item.id)}
@@ -43,7 +50,7 @@ export function Header() {
             {activeId === item.id && (
               <span className="absolute -bottom-1 left-1/2 h-[5px] w-[5px] -translate-x-1/2 rounded-full bg-accent" />
             )}
-          </a>
+          </Link>
         ))}
       </nav>
       <ThemeToggle />
