@@ -39,8 +39,9 @@ export type SkillItem = {
 export type HeroPersonalItem = {
   text: string;
   tone?: CodeLine["tone"];
-  photo: string;
-  caption: string;
+  photo?: string;
+  caption?: string;
+  focus?: string;
 };
 
 export type ContactLink = {
