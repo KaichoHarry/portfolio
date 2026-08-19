@@ -29,6 +29,7 @@ export const skills = {
     },
     {
       name: "HTML / CSS / JavaScript",
+      icon: "/images/icons/skills/skill_icon_javascript.svg",
       years: "2年",
       level: 3,
       description: "ハッカソンでフロントエンド作成に使用。React・Next.js・TypeScriptでの実装経験あり。",
@@ -36,6 +37,7 @@ export const skills = {
     },
     {
       name: "SQL",
+      icon: "/images/icons/skills/skill_icon_postgresql.svg",
       years: "4年",
       level: 3,
       description: "ハッカソンや大学のグループ開発で使用。テーブル設計から基本的なクエリ実装まで対応できる。",
@@ -43,6 +45,7 @@ export const skills = {
     },
     {
       name: "C",
+      icon: "/images/icons/skills/skill_icon_c.svg",
       years: "3年",
       level: 2,
       description:
@@ -50,6 +53,7 @@ export const skills = {
     },
     {
       name: "Visual Basic",
+      icon: "/images/icons/skills/skill_icon_visualbasic.svg",
       years: "7年",
       level: 5,
       description:
@@ -57,6 +61,7 @@ export const skills = {
     },
     {
       name: "Google Apps Script",
+      icon: "/images/icons/skills/skill_icon_googleappsscript.svg",
       years: "5年",
       level: 5,
       description:
@@ -83,38 +88,39 @@ export const skills = {
   aiTools: [
     {
       name: "ChatGPT",
+      icon: "/images/icons/ai/ai_icon_chatgpt.svg",
       years: "2年",
       level: 4,
       description: "システムの要件定義・設計等の相談相手として活用。",
     },
     {
       name: "Gemini",
+      icon: "/images/icons/ai/ai_icon_gemini.svg",
       years: "1.5年",
       level: 4,
       description: "CLIを用いてドキュメントを読み込ませ、コーディングに活用。",
     },
     {
       name: "NotionAI",
+      icon: "/images/icons/ai/ai_icon_notion.svg",
       years: "2年",
       level: 3,
       description: "チームの議事録作成やドキュメント管理、ガントチャート作成等に活用。",
     },
     {
       name: "FigmaAI",
+      icon: "/images/icons/ai/ai_icon_figma.svg",
       years: "1年",
       level: 2,
       description: "フロントエンドのモック作成や改装(デザイン変更)に活用。",
     },
+    {
+      name: "Claude Code",
+      icon: "/images/icons/ai/ai_icon_claude.svg",
+      years: "1〜2ヶ月",
+      description: "設計・コーディング・デザインなど幅広く活用。",
+    },
   ] satisfies SkillItem[],
   otherLabel: "Other Tools & Platforms",
-  otherTools: [
-    "Go",
-    "OpenAI API",
-    "Google Gemini API",
-    "shadcn/ui",
-    "Vercel",
-    "Railway",
-    "Hugging Face Spaces",
-    "Claude Code",
-  ],
+  otherTools: ["Go", "OpenAI API", "Google Gemini API", "shadcn/ui", "Vercel", "Railway", "Hugging Face Spaces"],
 };
