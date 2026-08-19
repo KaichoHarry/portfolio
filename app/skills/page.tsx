@@ -36,6 +36,22 @@ export default function SkillsPage() {
         </div>
 
         <div className="my-11 flex items-center gap-3.5 sm:my-14">
+          <span className="whitespace-nowrap font-mono text-sm text-accent">&gt; {skills.aiToolsTitle}</span>
+          <span
+            className="h-px flex-1"
+            style={{
+              backgroundImage: "repeating-linear-gradient(to right, var(--border) 0 6px, transparent 6px 12px)",
+            }}
+          />
+        </div>
+        <p className="mb-8 max-w-xl text-base text-text-muted">{skills.aiToolsSubtitle}</p>
+        <div className="relative grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {skills.aiTools.map((tool) => (
+            <SkillDetailCard key={tool.name} skill={tool} />
+          ))}
+        </div>
+
+        <div className="my-11 flex items-center gap-3.5 sm:my-14">
           <span className="whitespace-nowrap font-mono text-sm text-accent">&gt; {skills.otherLabel}</span>
           <span
             className="h-px flex-1"

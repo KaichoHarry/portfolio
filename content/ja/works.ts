@@ -50,7 +50,10 @@ export const works = {
       summary:
         "顔画像から、その人物が将来成し遂げる「偉業」をAIが予測・診断するWebアプリ。「現状分析」ではなく「未来予測」にフォーカスしたエンタメ的AIコンテンツ。",
       tags: ["Python", "PyTorch", "FastAPI", "PostgreSQL"],
-      links: { github: "https://github.com/KaichoHarry/face-achievement-diag" },
+      links: {
+        github: "https://github.com/KaichoHarry/face-achievement-diag",
+        demo: "https://face-achievement-diag.vercel.app",
+      },
       status: "public",
     },
     {

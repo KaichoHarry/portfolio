@@ -3,7 +3,6 @@ import Link from "next/link";
 import { skills } from "@/content/ja";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-import { SkillBadge } from "@/components/ui/SkillBadge";
 
 export function Skills() {
   return (
@@ -34,16 +33,12 @@ export function Skills() {
       <RevealOnScroll delay={130} distanceY={30}>
         <p className="mb-11 max-w-xl text-base text-text-muted">{skills.subtitle}</p>
       </RevealOnScroll>
-      <div className="relative grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="relative flex flex-wrap gap-2.5">
         {skills.items.map((skill, i) => (
-          <RevealOnScroll
-            key={skill.name}
-            delay={150 + i * 55}
-            distanceY={34}
-            scale={0.9}
-            className="h-full"
-          >
-            <SkillBadge skill={skill} />
+          <RevealOnScroll key={skill.name} delay={150 + i * 55} distanceY={24} scale={0.95}>
+            <span className="rounded-md border border-border px-3.5 py-1.5 font-mono text-[13px] text-text">
+              {skill.name}
+            </span>
           </RevealOnScroll>
         ))}
       </div>

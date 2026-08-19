@@ -30,10 +30,11 @@ export type Project = {
 
 export type SkillItem = {
   name: string;
-  icon: string;
+  icon?: string;
   years?: string;
   level?: 1 | 2 | 3 | 4 | 5;
   description?: string;
+  tools?: string[];
 };
 
 export type HeroPersonalItem = {
