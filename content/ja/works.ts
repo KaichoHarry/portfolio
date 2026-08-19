@@ -67,7 +67,10 @@ export const works = {
       summary:
         "飲食店やイベント会場の待ち時間に、AIが会話参加者として加わり話題提案・深掘り質問・共感で会話を支援する音声対話アプリ。",
       tags: ["React", "Vite", "Flask", "Whisper", "Gemini API"],
-      links: { github: "https://github.com/KaichoHarry/talk-seed" },
+      links: {
+        github: "https://github.com/KaichoHarry/talk-seed",
+        demo: "https://talk-seed-iota.vercel.app/",
+      },
       status: "public",
     },
     {
