@@ -39,7 +39,10 @@ export const works = {
       summary:
         "ソロプレイ・AI対戦・文章しりとり(フリートーク)の3モードを備えたWebしりとりアプリ。ほぼ全工程をClaude Code(AI駆動開発)で実装。",
       tags: ["Next.js", "TypeScript", "Go", "PostgreSQL", "Gemini API"],
-      links: { github: "https://github.com/KaichoHarry/AI-shiritori-app" },
+      links: {
+        github: "https://github.com/KaichoHarry/AI-shiritori-app",
+        demo: "https://frontend-production-ebe1.up.railway.app/",
+      },
       status: "public",
     },
     {
