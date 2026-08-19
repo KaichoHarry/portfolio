@@ -11,7 +11,7 @@ export const skills = {
       years: "6年",
       level: 5,
       description:
-        "AIエージェント開発・機械学習・Webバックエンド・業務自動化まで、6年間にわたり中核として使用。設計判断からパフォーマンス改善まで一人で担える。",
+        "様々なハッカソン・インターンで使用。主に機械学習やファインチューニングなど、AI関連の学習・開発に活用してきた。",
       tools: [
         "FastAPI",
         "Flask",
@@ -31,49 +31,51 @@ export const skills = {
       name: "HTML / CSS / JavaScript",
       years: "2年",
       level: 3,
-      description:
-        "React・Next.jsを用いたフロントエンド実装を、典型的なユースケースであれば一人で完結できる。TypeScriptによる型安全な実装にも対応。",
+      description: "ハッカソンでフロントエンド作成に使用。React・Next.js・TypeScriptでの実装経験あり。",
       tools: ["React", "Next.js", "Node.js", "TypeScript", "Vite"],
     },
     {
       name: "SQL",
       years: "4年",
       level: 3,
-      description: "テーブル設計・CRUD実装・基本的なクエリチューニングまで一人で対応できる。",
+      description: "ハッカソンや大学のグループ開発で使用。テーブル設計から基本的なクエリ実装まで対応できる。",
       tools: ["PostgreSQL", "MySQL", "SQLite"],
     },
     {
       name: "C",
       years: "3年",
       level: 2,
-      description: "基本文法・ポインタ操作は理解しており、ドキュメントを見ながら小規模な実装ができる。",
+      description:
+        "大学の授業で学習。ポインタや構造体を扱える。競技プログラミング用にC++も学習しており、基本構造は理解している。",
     },
     {
       name: "Visual Basic",
       years: "7年",
       level: 5,
-      description: "7年間の実務利用で、業務システムのマクロ・自動化ツール開発を熟達したレベルで行える。",
+      description:
+        "実家の美容室の業務システムで使用。メニュー・顧客管理や決済情報の集計マクロを開発し、現在も実務で運用中。",
     },
     {
       name: "Google Apps Script",
       years: "5年",
       level: 5,
       description:
-        "スプレッドシート連携の自動化やチームの業務効率化ツールを、高度に設計・実装できる。",
+        "実家の美容室が加盟する美容師組合の情報管理で使用。Webスクレイピングも活用し、会員美容室宛のラベルシール印刷などを実務で運用している。",
     },
     {
       name: "Git / GitHub",
       icon: "/images/icons/skills/skill_icon_git.svg",
       years: "2年",
       level: 4,
-      description: "ブランチ運用・PRレビュー・コンフリクト解消まで含めたチーム開発フローを主体的に運用できる。",
+      description:
+        "ハッカソン挑戦時から使用。PR作成・ブランチ管理などグループ開発の一連の流れに対応できる。ハッカソン・インターンで利用。",
     },
     {
       name: "Docker",
       icon: "/images/icons/skills/skill_icon_docker.svg",
       years: "2年",
       level: 3,
-      description: "Dockerfile・docker-composeを用いた開発環境構築・コンテナ化を一人で実装できる。",
+      description: "Git/GitHubと同様、ハッカソン・インターンで利用。",
     },
   ] satisfies SkillItem[],
   aiToolsTitle: "AI Tools",

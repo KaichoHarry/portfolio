@@ -3,8 +3,12 @@ import Link from "next/link";
 import { skills } from "@/content/ja";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
+import { SkillDetailCard } from "@/components/ui/SkillDetailCard";
+
+const TEASER_COUNT = 4;
 
 export function Skills() {
+  const featured = skills.items.slice(0, TEASER_COUNT);
   return (
     <section
       id="skills"
@@ -33,16 +37,14 @@ export function Skills() {
       <RevealOnScroll delay={130} distanceY={30}>
         <p className="mb-11 max-w-xl text-base text-text-muted">{skills.subtitle}</p>
       </RevealOnScroll>
-      <div className="relative flex flex-wrap gap-2.5">
-        {skills.items.map((skill, i) => (
-          <RevealOnScroll key={skill.name} delay={150 + i * 55} distanceY={24} scale={0.95}>
-            <span className="rounded-md border border-border px-3.5 py-1.5 font-mono text-[13px] text-text">
-              {skill.name}
-            </span>
+      <div className="relative grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {featured.map((skill, i) => (
+          <RevealOnScroll key={skill.name} delay={150 + i * 90} distanceY={34} scale={0.95} className="h-full">
+            <SkillDetailCard skill={skill} />
           </RevealOnScroll>
         ))}
       </div>
-      <RevealOnScroll delay={150 + skills.items.length * 55} distanceY={24} scale={0.97}>
+      <RevealOnScroll delay={150 + featured.length * 90} distanceY={24} scale={0.97}>
         <Link
           href="/skills"
           className="mt-11 inline-flex items-center gap-2.5 rounded-lg border border-accent px-6 py-3.5 font-mono text-[15px] text-accent transition-colors hover:bg-accent/10"
