@@ -118,6 +118,7 @@ export const skills = {
       name: "Claude Code",
       icon: "/images/icons/ai/ai_icon_claude.svg",
       years: "1〜2ヶ月",
+      level: 4,
       description: "設計・コーディング・デザインなど幅広く活用。",
     },
   ] satisfies SkillItem[],
