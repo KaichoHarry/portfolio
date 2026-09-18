@@ -26,6 +26,7 @@ export type Project = {
   tags: string[];
   links: ProjectLinks;
   status: ProjectStatus;
+  thumbnail?: string;
 };
 
 export type SkillItem = {

@@ -27,8 +27,8 @@ export default function Home() {
       <Header />
       <main className="relative">
         <Hero />
-        <AboutTeaser />
         <WorksTeaser />
+        <AboutTeaser />
         <Skills />
         <Contact />
       </main>

@@ -5,11 +5,7 @@ import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { WorksMarquee } from "@/components/ui/WorksMarquee";
 
-const TEASER_COUNT = 3;
-
 export function WorksTeaser() {
-  const featured = works.items.slice(0, TEASER_COUNT);
-
   return (
     <section
       id="works"
@@ -32,7 +28,7 @@ export function WorksTeaser() {
         <p className="mb-12 max-w-xl text-base text-text-muted sm:mb-14">{works.subtitle}</p>
       </RevealOnScroll>
       <RevealOnScroll delay={180} distanceY={50}>
-        <WorksMarquee projects={featured} />
+        <WorksMarquee projects={works.items} />
       </RevealOnScroll>
       <RevealOnScroll delay={310} distanceY={24} scale={0.97}>
         <Link

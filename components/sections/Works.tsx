@@ -2,7 +2,7 @@ import Image from "next/image";
 import { works } from "@/content/ja";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-import { WorksMarquee } from "@/components/ui/WorksMarquee";
+import { WorkCard } from "@/components/ui/WorkCard";
 
 export function Works() {
   return (
@@ -26,9 +26,13 @@ export function Works() {
       <RevealOnScroll delay={130} distanceY={30}>
         <p className="mb-12 max-w-xl text-base text-text-muted sm:mb-14">{works.subtitle}</p>
       </RevealOnScroll>
-      <RevealOnScroll delay={180} distanceY={50}>
-        <WorksMarquee projects={works.items} />
-      </RevealOnScroll>
+      <div className="relative grid grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-3">
+        {works.items.map((project, i) => (
+          <RevealOnScroll key={project.slug} delay={180 + i * 130} distanceY={50} className="h-full">
+            <WorkCard project={project} />
+          </RevealOnScroll>
+        ))}
+      </div>
     </section>
   );
 }

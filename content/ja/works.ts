@@ -15,6 +15,7 @@ export const works = {
       tags: ["Python", "LangChain", "LangGraph", "OpenAI API", "Docker"],
       links: { github: "https://github.com/KaichoHarry/make-task-AI" },
       status: "public",
+      thumbnail: "/images/works/make-task-ai-thumb.jpg",
     },
     {
       slug: "the-8pm-challenge",
@@ -30,6 +31,7 @@ export const works = {
         docs: "https://hurricane-dance-850.notion.site/25f605b98b4f80c180afe5b8e7b3f352",
       },
       status: "public",
+      thumbnail: "/images/works/the-8pm-challenge-thumb.jpg",
     },
     {
       slug: "ai-shiritori-app",
@@ -44,6 +46,7 @@ export const works = {
         demo: "https://ai-shiritori-app.nanko-haruka.workers.dev/",
       },
       status: "public",
+      thumbnail: "/images/works/ai-shiritori-app-thumb.jpg",
     },
     {
       slug: "face-achievement-diag",
@@ -58,6 +61,7 @@ export const works = {
         demo: "https://face-achievement-diag.vercel.app",
       },
       status: "public",
+      thumbnail: "/images/works/face-achievement-diag-thumb.jpg",
     },
     {
       slug: "talk-seed",
@@ -72,6 +76,7 @@ export const works = {
         demo: "https://talk-seed-iota.vercel.app/",
       },
       status: "public",
+      thumbnail: "/images/works/talk-seed-thumb.jpg",
     },
     {
       slug: "my-tech-pulse",
@@ -83,6 +88,7 @@ export const works = {
       tags: ["HTML/CSS/JS", "Recommendation Algorithm"],
       links: { demo: "https://mytechpulse.net/" },
       status: "public",
+      thumbnail: "/images/works/my-tech-pulse-thumb.jpg",
     },
   ] satisfies Project[],
 };

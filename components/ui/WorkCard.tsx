@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { KeyboardEvent } from "react";
 import type { Project } from "@/lib/types";
 
@@ -31,7 +32,7 @@ export function WorkCard({ project }: { project: Project }) {
       tabIndex={primaryHref ? 0 : undefined}
       onClick={primaryHref ? openPrimary : undefined}
       onKeyDown={primaryHref ? handleKeyDown : undefined}
-      className={`flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors ${
+      className={`group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors ${
         primaryHref ? "cursor-pointer hover:border-accent" : ""
       }`}
     >
@@ -43,6 +44,24 @@ export function WorkCard({ project }: { project: Project }) {
         </div>
         <span className="font-mono text-[11px] text-text-muted">{project.filename}</span>
       </div>
+      {project.thumbnail && (
+        <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-bg-alt">
+          <Image
+            src={project.thumbnail}
+            alt={`${project.title}のスクリーンショット`}
+            fill
+            sizes="(min-width: 768px) 380px, 300px"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+          {primaryHref && (
+            <div className="pointer-events-none absolute inset-0 flex items-end justify-end bg-black/0 p-3 opacity-0 transition-all duration-300 group-hover:bg-black/25 group-hover:opacity-100">
+              <span className="rounded-md border border-white/40 bg-black/60 px-2.5 py-1 font-mono text-[11px] text-white backdrop-blur-sm">
+                &gt; open ↗
+              </span>
+            </div>
+          )}
+        </div>
+      )}
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-2 flex items-start justify-between gap-2">
           <h3 className="text-xl font-bold">{project.title}</h3>
