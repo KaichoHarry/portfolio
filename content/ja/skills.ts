@@ -123,5 +123,15 @@ export const skills = {
     },
   ] satisfies SkillItem[],
   otherLabel: "Other Tools & Platforms",
-  otherTools: ["Go", "OpenAI API", "Google Gemini API", "shadcn/ui", "Vercel", "Railway", "Hugging Face Spaces"],
+  otherTools: [
+    "Go",
+    "OpenAI API",
+    "Google Gemini API",
+    "shadcn/ui",
+    "Vercel",
+    "Railway",
+    "Cloudflare Pages",
+    "Fly.io",
+    "Hugging Face Spaces",
+  ],
 };

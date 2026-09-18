@@ -41,7 +41,7 @@ export const works = {
       tags: ["Next.js", "TypeScript", "Go", "PostgreSQL", "Gemini API"],
       links: {
         github: "https://github.com/KaichoHarry/AI-shiritori-app",
-        demo: "https://frontend-production-ebe1.up.railway.app/",
+        demo: "https://ai-shiritori-app.nanko-haruka.workers.dev/",
       },
       status: "public",
     },
