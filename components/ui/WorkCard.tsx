@@ -1,3 +1,6 @@
+"use client";
+
+import type { KeyboardEvent } from "react";
 import type { Project } from "@/lib/types";
 
 const LINK_LABEL: Record<string, string> = {
@@ -8,9 +11,30 @@ const LINK_LABEL: Record<string, string> = {
 
 export function WorkCard({ project }: { project: Project }) {
   const linkEntries = Object.entries(project.links).filter((entry): entry is [string, string] => Boolean(entry[1]));
+  const primaryHref = project.links.demo ?? project.links.github ?? project.links.docs;
+
+  const openPrimary = () => {
+    if (primaryHref) window.open(primaryHref, "_blank", "noreferrer");
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (!primaryHref) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openPrimary();
+    }
+  };
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
+    <div
+      role={primaryHref ? "link" : undefined}
+      tabIndex={primaryHref ? 0 : undefined}
+      onClick={primaryHref ? openPrimary : undefined}
+      onKeyDown={primaryHref ? handleKeyDown : undefined}
+      className={`flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors ${
+        primaryHref ? "cursor-pointer hover:border-accent" : ""
+      }`}
+    >
       <div className="flex items-center justify-between border-b border-border px-3.5 py-2.5">
         <div className="flex gap-1.5">
           <span className="h-[9px] w-[9px] rounded-full bg-[#ff5f56]" />
@@ -48,6 +72,7 @@ export function WorkCard({ project }: { project: Project }) {
                 href={href}
                 target="_blank"
                 rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
                 className="font-mono text-xs text-text hover:text-accent"
               >
                 &gt; {LINK_LABEL[key] ?? key}
