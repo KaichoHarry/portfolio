@@ -3,7 +3,7 @@ import type { Project } from "@/lib/types";
 export const works = {
   title: "Selected Works",
   subtitle:
-    "ハッカソンやインターン、個人開発で手がけた6つのプロジェクトです。企画・設計から実装まで携わりました。",
+    "ハッカソンやインターン、個人開発で手がけた7つのプロジェクトです。企画・設計から実装まで携わりました。",
   items: [
     {
       slug: "make-task-ai",
@@ -89,6 +89,21 @@ export const works = {
       links: { demo: "https://mytechpulse.net/" },
       status: "public",
       thumbnail: "/images/works/my-tech-pulse-thumb.jpg",
+    },
+    {
+      slug: "engiiro-app",
+      filename: "engiiro-app.tsx",
+      title: "engiiro(えんじいろ)",
+      meta: "jig.jp Webコース サマーインターンシップ2026(3名チーム)",
+      summary:
+        "投稿した本音をAIが赤ちゃん語・お母さん語に自動変換してから公開する「エンジニアのための本音吐露SNS」。3人チームで開発し、DB設計・バックエンドAPI全般の実装に加え、PMとして進捗管理も担当。",
+      tags: ["React", "TypeScript", "Deno", "PostgreSQL", "FastAPI", "Gemini API"],
+      links: {
+        github: "https://github.com/engiiro/engiiro-app",
+        demo: "https://app-xi-henna-63.vercel.app/",
+      },
+      status: "public",
+      thumbnail: "/images/works/engiiro-app-thumb.jpg",
     },
   ] satisfies Project[],
 };
