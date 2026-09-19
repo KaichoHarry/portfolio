@@ -7,8 +7,8 @@ export const hero = {
   lineThree: "し、価値に変える。",
   subtitle:
     "課題を構造的に分析し、人や技術を巻き込みながら改善を実装するエンジニアです。ベトナムでのインターンでは複数AIエージェントによる開発支援システムを、ハッカソンでは「AIの弱点をコンテンツ化する」アイデアで努力賞を受賞しました。",
-  ctaLabel: "view my works",
-  ctaHref: "#works",
+  ctaLabel: "about me",
+  ctaHref: "/about",
   personalWindowFilename: "profile.json",
   personalHint: "各行にカーソルを合わせる(タップ)と写真が変わります",
   personalItems: [

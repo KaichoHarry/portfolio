@@ -8,7 +8,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { nav, footer } from "@/content/ja";
 import { ThemeToggle } from "./ThemeToggle";
 
-const ROUTE_IDS = ["about", "works", "skills"];
+const ROUTE_IDS = ["about", "works", "internships", "skills"];
 const HOME_SCROLL_IDS = ["home", "contact"];
 
 export function Header() {

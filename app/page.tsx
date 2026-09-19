@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { WorksTeaser } from "@/components/sections/WorksTeaser";
+import { InternshipTeaser } from "@/components/sections/InternshipTeaser";
 import { Skills } from "@/components/sections/Skills";
 import { Contact } from "@/components/sections/Contact";
 
@@ -28,7 +28,7 @@ export default function Home() {
       <main className="relative">
         <Hero />
         <WorksTeaser />
-        <AboutTeaser />
+        <InternshipTeaser />
         <Skills />
         <Contact />
       </main>

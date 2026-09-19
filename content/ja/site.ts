@@ -4,6 +4,7 @@ export const nav: NavItem[] = [
   { id: "home", label: "Home", href: "/" },
   { id: "about", label: "About", href: "/about" },
   { id: "works", label: "Works", href: "/works" },
+  { id: "internships", label: "Internship", href: "/internships" },
   { id: "skills", label: "Skills", href: "/skills" },
   { id: "contact", label: "Contact", href: "/#contact" },
 ];

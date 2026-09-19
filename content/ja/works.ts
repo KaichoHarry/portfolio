@@ -3,20 +3,8 @@ import type { Project } from "@/lib/types";
 export const works = {
   title: "Selected Works",
   subtitle:
-    "ハッカソンやインターン、個人開発で手がけた7つのプロジェクトです。企画・設計から実装まで携わりました。",
+    "ハッカソンや個人開発で手がけた6つのプロジェクトです。企画・設計から実装まで携わりました。",
   items: [
-    {
-      slug: "make-task-ai",
-      filename: "make-task-ai.py",
-      title: "make-task-AI",
-      meta: "Techzen (Vietnam) Internship",
-      summary:
-        "曖昧なユーザーストーリー・受け入れ条件を、複数のAIエージェント(PM/バックエンド/セキュリティ/QA/UX視点)が多角的にレビューし、具体的な開発タスクへ自動分解するシステム。リーダーとして要件定義から実装までを担当。",
-      tags: ["Python", "LangChain", "LangGraph", "OpenAI API", "Docker"],
-      links: { github: "https://github.com/KaichoHarry/make-task-AI" },
-      status: "public",
-      thumbnail: "/images/works/make-task-ai-thumb.jpg",
-    },
     {
       slug: "the-8pm-challenge",
       filename: "the-8pm-challenge.tsx",

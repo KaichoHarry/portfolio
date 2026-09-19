@@ -63,3 +63,19 @@ export type AboutProfile = {
   location: string;
   availability: string;
 };
+
+export type InternshipStatus = "public" | "coming-soon";
+
+export type Internship = {
+  slug: string;
+  filename: string;
+  title: string;
+  period?: string;
+  meta?: string;
+  summary: string;
+  tags: string[];
+  status: InternshipStatus;
+  thumbnail?: string;
+  body?: string[];
+  links?: ProjectLinks;
+};

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { hero } from "@/content/ja";
 import { HeroPersonalWindow } from "@/components/sections/HeroPersonalWindow";
 
@@ -27,12 +28,12 @@ export function Hero() {
         <p className="mb-9 max-w-[480px] border-l-2 border-accent pl-4 text-[17px] leading-relaxed text-text-muted">
           {hero.subtitle}
         </p>
-        <a
+        <Link
           href={hero.ctaHref}
           className="inline-flex items-center gap-2.5 rounded-lg border border-accent px-6 py-3.5 font-mono text-[15px] text-accent transition-colors hover:bg-accent/10"
         >
           &gt; {hero.ctaLabel} <span>&#8594;</span>
-        </a>
+        </Link>
       </div>
       <div className="relative z-10">
         <Image
