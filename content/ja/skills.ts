@@ -11,7 +11,7 @@ export const skills = {
       years: "6年",
       level: 5,
       description:
-        "様々なハッカソン・インターンで使用。主に機械学習やファインチューニングなど、AI関連の学習・開発に活用してきた。",
+        "Techzenでのインターンでは、LangGraphで複数のAIエージェントに専門家・批評家の役割を与え、要件定義を自動でリファインメントするシステム「make-task-AI」をFastAPI・PostgreSQL・Dockerで構築。「顔面偉業診断」ではPyTorch(EfficientNet_V2_S)による画像分類モデルのファインチューニングとAPI実装も担当した。",
       tools: [
         "FastAPI",
         "Flask",
@@ -32,16 +32,18 @@ export const skills = {
       icon: "/images/icons/skills/skill_icon_javascript.svg",
       years: "2年",
       level: 3,
-      description: "ハッカソンでフロントエンド作成に使用。React・Next.js・TypeScriptでの実装経験あり。",
-      tools: ["React", "Next.js", "Node.js", "TypeScript", "Vite"],
+      description:
+        "「MyTechPulse」ではフレームワークに頼らずHTML/CSS/JavaScriptでフロントエンドを実装し、個人開発の学習用クイズサイト「chizai-quiz」でも同様にVanilla JSでロジックを組んだ。TypeScriptでは「AI-shiritori-app」でNext.js製フロントエンドを、「engiiro」ではDenoによるバックエンドAPIを実装するなど、フロント・バックエンド双方の実装経験がある。",
+      tools: ["React", "Next.js", "Node.js", "TypeScript", "Vite", "Deno"],
     },
     {
       name: "SQL",
       icon: "/images/icons/skills/skill_icon_postgresql.svg",
       years: "4年",
       level: 3,
-      description: "ハッカソンや大学のグループ開発で使用。テーブル設計から基本的なクエリ実装まで対応できる。",
-      tools: ["PostgreSQL", "MySQL", "SQLite"],
+      description:
+        "「engiiro」ではDB設計を主担当としてPostgreSQLのテーブル設計・マイグレーションを行い、「AI-shiritori-app」でもプレイ履歴・アカウント管理のテーブルを設計した。所属する学生団体の情報管理基盤構築でも、イベント・ドキュメント・出欠記録を関連付けたER図の設計にデータベース理論を活用している。",
+      tools: ["PostgreSQL", "MySQL", "SQLite", "Turso"],
     },
     {
       name: "C",
@@ -65,7 +67,14 @@ export const skills = {
       years: "5年",
       level: 5,
       description:
-        "実家の美容室が加盟する美容師組合の情報管理で使用。Webスクレイピングも活用し、会員美容室宛のラベルシール印刷などを実務で運用している。",
+        "実家の美容室が加盟する美容師組合の情報管理で使用。Webスクレイピングも活用し、会員美容室宛のラベルシール印刷などを実務で運用している。ハッカソン「20時の挑戦状」でもGoogleスプレッドシートをDB代わりに扱うバックエンドをGASで構築し、2週間という短期開発でのスピードと運用コストの両立を図った。",
+    },
+    {
+      name: "Ruby",
+      years: "1週間",
+      level: 2,
+      description:
+        "ラクスル株式会社の1weekインターンシップで、社内稼働システムの改修にRubyを使用。守秘義務のため詳細は控えるが、既存コードベースの設計方針や命名規則を読み解き、その流儀に沿った機能追加・修正を行った。",
     },
     {
       name: "Git / GitHub",
@@ -73,14 +82,15 @@ export const skills = {
       years: "2年",
       level: 4,
       description:
-        "ハッカソン挑戦時から使用。PR作成・ブランチ管理などグループ開発の一連の流れに対応できる。ハッカソン・インターンで利用。",
+        "GitHub上でIssueを作成し、機能単位でブランチを切って実装後Pull Requestでレビュー・マージする運用を、スプリント単位のアジャイル開発(Techzenインターン)からNotionでのバックログ管理を伴うウォーターフォール的なハッカソン開発まで使い分けてきた。「engiiro」では3人チームのコンフリクトを避けるため、小さな変更ごとに頻繁に統合する運用を徹底した。",
     },
     {
       name: "Docker",
       icon: "/images/icons/skills/skill_icon_docker.svg",
       years: "2年",
       level: 3,
-      description: "Git/GitHubと同様、ハッカソン・インターンで利用。",
+      description:
+        "「顔面偉業診断」ではバックエンド・インフラを担当し、FastAPI製の推論APIをDockerでコンテナ化してHugging Face Spacesにデプロイ。「TalkSeed」でも環境構築からDocker化・デプロイまでを担当し、「AI-shiritori-app」ではDocker Composeでフロント・バックエンド・PostgreSQLを一括起動できる開発環境を構築した。",
     },
   ] satisfies SkillItem[],
   aiToolsTitle: "AI Tools",
