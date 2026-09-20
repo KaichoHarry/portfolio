@@ -2,9 +2,9 @@ import type { HeroPersonalItem } from "@/lib/types";
 
 export const hero = {
   greeting: "Hi, I'm 南口遼河.",
-  lineTwoPrefix: "課題を",
-  highlight: "構造化",
-  lineThree: "し、価値に変える。",
+  lineTwoPrefix: "自分の手で、",
+  highlight: "誰かの笑顔",
+  lineThree: "をつくる。",
   subtitle:
     "課題を構造的に分析し、人や技術を巻き込みながら改善を実装するエンジニアです。ベトナムでのインターンでは複数AIエージェントによる開発支援システムを、ハッカソンでは「AIの弱点をコンテンツ化する」アイデアで努力賞を受賞しました。",
   ctaLabel: "about me",
