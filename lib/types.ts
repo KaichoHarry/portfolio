@@ -23,6 +23,7 @@ export type Project = {
   title: string;
   meta?: string;
   summary: string;
+  techNote?: string;
   tags: string[];
   links: ProjectLinks;
   status: ProjectStatus;
@@ -62,6 +63,17 @@ export type AboutProfile = {
   techStack: string[];
   location: string;
   availability: string;
+};
+
+export type GuideItem = {
+  label: string;
+  description: string;
+  href: string;
+};
+
+export type Capability = {
+  area: string;
+  detail: string;
 };
 
 export type InternshipStatus = "public" | "coming-soon";

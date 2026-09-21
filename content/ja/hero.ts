@@ -2,13 +2,23 @@ import type { HeroPersonalItem } from "@/lib/types";
 
 export const hero = {
   greeting: "Hi, I'm 南口遼河.",
+  roleLine:
+    "要件定義から実装、チームマネジメントまで一気通貫でこなす、AIエージェント開発が得意なソフトウェアエンジニアです。",
   lineTwoPrefix: "技術でも、組織でも、人間関係でも、",
   highlight: "笑顔",
   lineThree: "につながるなら本気になれる。",
   subtitle:
     "実家の美容室で働く母を助けたいという思いから、GAS/VBAでの業務自動化に取り組んだことがエンジニアを志すきっかけです。ベトナムのインターンでは複数AIエージェントによる開発支援システムを、jig.jpのサマーインターンでは「engiiro」というエンジニア向けSNSの設計・実装を担当しました。",
+  highlights: [
+    "AIエージェント開発",
+    "チームPM経験",
+    "海外(ベトナム)インターン",
+    "組織再建(3→15名)",
+  ],
   ctaLabel: "about me",
   ctaHref: "/about",
+  ctaSecondaryLabel: "view works",
+  ctaSecondaryHref: "/works",
   personalWindowFilename: "profile.json",
   personalHint: "各行にカーソルを合わせる(タップ)と写真が変わります",
   personalItems: [

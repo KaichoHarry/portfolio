@@ -18,22 +18,43 @@ export function Hero() {
       />
       <div className="relative z-10">
         <div className="mb-5 font-mono text-base text-accent">&gt; hello_world()</div>
-        <h1 className="mb-6 text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl">
+        <h1 className="mb-4 text-3xl font-extrabold leading-[1.25] tracking-tight sm:text-4xl">
           {hero.greeting}
           <br />
-          {hero.lineTwoPrefix}
-          <span className="text-accent">{hero.highlight}</span>
-          {hero.lineThree}
+          {hero.roleLine}
         </h1>
-        <p className="mb-9 max-w-[480px] border-l-2 border-accent pl-4 text-[17px] leading-relaxed text-text-muted">
+        <p className="mb-6 text-lg font-semibold leading-snug text-accent sm:text-xl">
+          {hero.lineTwoPrefix}
+          {hero.highlight}
+          {hero.lineThree}
+        </p>
+        <p className="mb-6 max-w-[480px] border-l-2 border-accent pl-4 text-[17px] leading-relaxed text-text-muted">
           {hero.subtitle}
         </p>
-        <Link
-          href={hero.ctaHref}
-          className="inline-flex items-center gap-2.5 rounded-lg border border-accent px-6 py-3.5 font-mono text-[15px] text-accent transition-colors hover:bg-accent/10"
-        >
-          &gt; {hero.ctaLabel} <span>&#8594;</span>
-        </Link>
+        <div className="mb-9 flex flex-wrap gap-2">
+          {hero.highlights.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-accent/40 bg-accent/5 px-3 py-1 font-mono text-[12px] text-accent"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-3.5">
+          <Link
+            href={hero.ctaHref}
+            className="inline-flex items-center gap-2.5 rounded-lg border border-accent px-6 py-3.5 font-mono text-[15px] text-accent transition-colors hover:bg-accent/10"
+          >
+            &gt; {hero.ctaLabel} <span>&#8594;</span>
+          </Link>
+          <Link
+            href={hero.ctaSecondaryHref}
+            className="inline-flex items-center gap-2.5 rounded-lg border border-border px-6 py-3.5 font-mono text-[15px] text-text transition-colors hover:border-accent hover:text-accent"
+          >
+            &gt; {hero.ctaSecondaryLabel} <span>&#8594;</span>
+          </Link>
+        </div>
       </div>
       <div className="relative z-10">
         <Image

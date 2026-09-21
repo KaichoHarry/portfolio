@@ -1,8 +1,37 @@
-import type { AboutProfile } from "@/lib/types";
+import type { AboutProfile, Capability } from "@/lib/types";
 
 export const about = {
   headline1: "自分の手で、",
   headlineHighlight: "誰かの笑顔をつくる。",
+  capabilitiesTitle: "対応できる領域",
+  capabilitiesSubtitle:
+    "企画から実装、運用、チームマネジメントまで。特定の技術だけでなく、プロダクトを立ち上げるのに必要な範囲を一通り自分で動かせるのが強みです。",
+  capabilities: [
+    {
+      area: "Frontend",
+      detail: "React / Next.js / TypeScriptでUIから状態管理まで実装",
+    },
+    {
+      area: "Backend / API",
+      detail: "FastAPI・Flask・Go・Denoなど、要件に応じて言語を選んでAPIを設計・実装",
+    },
+    {
+      area: "AI / ML",
+      detail: "LangGraphによるマルチAIエージェント設計、PyTorchでの画像分類モデル構築",
+    },
+    {
+      area: "Data / DB",
+      detail: "PostgreSQL・MySQLでのER設計・正規化・マイグレーション",
+    },
+    {
+      area: "Infra / DevOps",
+      detail: "Dockerでの環境構築、Vercel・Fly.io・Cloudflare等へのデプロイ運用",
+    },
+    {
+      area: "PM / チームマネジメント",
+      detail: "プロジェクトの要件定義・進捗管理から、約250人規模の学生団体の運営改善まで",
+    },
+  ] satisfies Capability[],
   paragraphs: [
     "エンジニアを志したきっかけは、高校2年生のとき親からパソコンを譲り受けたことでした。実家の美容室で毎日忙しく働く母の姿を見て、少しでも業務を楽にしてあげたいと思い、GASとVBAというプログラミング言語で店舗業務の自動化に取り組みました。自分の作ったシステムが実際に母の負担を減らし、笑顔につながったことに強い魅力を感じ、「これを仕事にしたい」と思ったことが原点です。",
     "強みは、技術力だけでなく、目の前で起きていることを構造的に分析し、人や仕組みを巻き込みながら改善を実装できる点です。技術でも組織でも人間関係でも、誰かの笑顔につながるなら本気になれる——その姿勢を、技術開発・チームマネジメント・接客のいずれにおいても一貫して意識してきました。",

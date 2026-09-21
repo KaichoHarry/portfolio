@@ -91,8 +91,23 @@ export function About() {
           </div>
         </RevealOnScroll>
 
+        <RevealOnScroll delay={210} distanceY={28} scale={0.98}>
+          <div className="mb-14 rounded-2xl border border-border bg-surface p-6 sm:p-8">
+            <h3 className="mb-1.5 text-lg font-bold sm:text-xl">{about.capabilitiesTitle}</h3>
+            <p className="mb-6 text-sm leading-relaxed text-text-muted">{about.capabilitiesSubtitle}</p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {about.capabilities.map((item) => (
+                <div key={item.area} className="rounded-lg border border-border px-4 py-3.5">
+                  <div className="mb-1 font-mono text-[13px] font-semibold text-accent">{item.area}</div>
+                  <p className="text-[13.5px] leading-relaxed text-text-muted">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+
         {about.paragraphs.map((text, i) => (
-          <RevealOnScroll key={text.slice(0, 12)} delay={220 + i * 90} distanceY={30} scale={0.98}>
+          <RevealOnScroll key={text.slice(0, 12)} delay={260 + i * 90} distanceY={30} scale={0.98}>
             <p className="mb-5 text-base leading-relaxed text-text-muted">{text}</p>
           </RevealOnScroll>
         ))}

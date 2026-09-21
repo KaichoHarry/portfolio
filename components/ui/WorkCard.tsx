@@ -73,6 +73,11 @@ export function WorkCard({ project }: { project: Project }) {
         </div>
         {project.meta && <p className="mb-2 font-mono text-xs text-accent">{project.meta}</p>}
         <p className="mb-4 flex-1 text-[14.5px] leading-relaxed text-text-muted">{project.summary}</p>
+        {project.techNote && (
+          <p className="mb-4 rounded-lg border border-border bg-bg-alt/60 px-3 py-2.5 font-mono text-[12px] leading-relaxed text-text-muted">
+            <span className="text-accent">$ why —</span> {project.techNote}
+          </p>
+        )}
         <div className="mb-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
