@@ -12,7 +12,7 @@ export const guide = {
     },
     {
       label: "Internships",
-      description: "海外(ベトナム)・国内(jig.jp)のインターンで担当した役割",
+      description: "海外(ベトナム)・国内(jig.jp / ラクスル)のインターンで担当した役割と成果",
       href: "/internships",
     },
     {

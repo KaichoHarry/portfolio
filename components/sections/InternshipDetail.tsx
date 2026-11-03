@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
+import { MEDIA_KIND_LABEL } from "@/components/sections/Featured";
 import type { Internship } from "@/lib/types";
 
 const LINK_LABEL: Record<string, string> = {
@@ -31,6 +32,13 @@ export function InternshipDetail({ internship }: { internship: Internship }) {
       <RevealOnScroll delay={110} distanceY={34}>
         <h1 className="mb-3 text-3xl font-extrabold sm:text-[38px]">{internship.title}</h1>
       </RevealOnScroll>
+      {internship.award && (
+        <RevealOnScroll delay={130} distanceY={24}>
+          <span className="mb-3 inline-block rounded-md border border-accent bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent">
+            &#9733; {internship.award}
+          </span>
+        </RevealOnScroll>
+      )}
       {(internship.period || internship.meta) && (
         <RevealOnScroll delay={150} distanceY={24}>
           <p className="mb-8 font-mono text-sm text-accent">
@@ -72,6 +80,32 @@ export function InternshipDetail({ internship }: { internship: Internship }) {
           </RevealOnScroll>
         ))}
       </div>
+      {internship.media && internship.media.length > 0 && (
+        <RevealOnScroll delay={260 + (internship.body?.length ?? 1) * 90} distanceY={24}>
+          <div className="mt-10 space-y-3">
+            <h2 className="font-mono text-sm text-accent">&gt; 掲載・紹介</h2>
+            {internship.media.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-start justify-between gap-4 rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent"
+              >
+                <div>
+                  <span className="mb-2 inline-block rounded-md border border-border px-2 py-0.5 font-mono text-[11px] text-text-muted">
+                    {MEDIA_KIND_LABEL[item.kind]}
+                  </span>
+                  <p className="mb-1 font-bold">{item.title}</p>
+                  <p className="mb-1 font-mono text-[11px] text-text-muted">{item.source}</p>
+                  {item.note && <p className="text-[13.5px] leading-relaxed text-text-muted">{item.note}</p>}
+                </div>
+                <span className="text-text-muted transition-transform group-hover:translate-x-1">&#8599;</span>
+              </a>
+            ))}
+          </div>
+        </RevealOnScroll>
+      )}
       {linkEntries.length > 0 && (
         <RevealOnScroll delay={260 + (internship.body?.length ?? 1) * 90} distanceY={24}>
           <div className="mt-10 flex flex-wrap gap-6 border-t border-border pt-6">

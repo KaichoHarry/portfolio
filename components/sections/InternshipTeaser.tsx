@@ -25,7 +25,12 @@ export function InternshipTeaser() {
         <h2 className="mb-4 text-3xl font-extrabold sm:text-[38px]">{internships.title}</h2>
       </RevealOnScroll>
       <RevealOnScroll delay={130} distanceY={30}>
-        <p className="mb-12 max-w-xl text-base text-text-muted sm:mb-14">{internships.subtitle}</p>
+        <p className="mb-4 max-w-xl text-base text-text-muted">{internships.subtitle}</p>
+      </RevealOnScroll>
+      <RevealOnScroll delay={160} distanceY={26}>
+        <p className="mb-12 max-w-2xl border-l-2 border-accent pl-4 text-base font-semibold leading-relaxed text-text sm:mb-14">
+          {internships.throughline}
+        </p>
       </RevealOnScroll>
       <div className="relative grid grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-3">
         {internships.items.map((internship, i) => (

@@ -91,6 +91,20 @@ export function About() {
           </div>
         </RevealOnScroll>
 
+        <RevealOnScroll delay={200} distanceY={28} scale={0.98}>
+          <div className="mb-8 rounded-2xl border border-accent/50 bg-accent/5 p-6 sm:p-8">
+            <h3 className="mb-4 font-mono text-sm font-semibold text-accent">&gt; {about.summaryTitle}</h3>
+            <ul className="space-y-3">
+              {about.summary.map((line) => (
+                <li key={line} className="flex gap-3 text-[15px] leading-relaxed text-text">
+                  <span className="text-accent">&#9656;</span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </RevealOnScroll>
+
         <RevealOnScroll delay={210} distanceY={28} scale={0.98}>
           <div className="mb-14 rounded-2xl border border-border bg-surface p-6 sm:p-8">
             <h3 className="mb-1.5 text-lg font-bold sm:text-xl">{about.capabilitiesTitle}</h3>

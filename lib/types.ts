@@ -78,6 +78,21 @@ export type Capability = {
 
 export type InternshipStatus = "public" | "coming-soon";
 
+export type MediaKind = "award" | "interview" | "article" | "blog";
+
+export type MediaLink = {
+  kind: MediaKind;
+  title: string;
+  source: string;
+  href: string;
+  note?: string;
+};
+
+export type FeaturedItem = MediaLink & {
+  highlight: string;
+  period: string;
+};
+
 export type Internship = {
   slug: string;
   filename: string;
@@ -88,6 +103,8 @@ export type Internship = {
   tags: string[];
   status: InternshipStatus;
   thumbnail?: string;
+  award?: string;
   body?: string[];
   links?: ProjectLinks;
+  media?: MediaLink[];
 };

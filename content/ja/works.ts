@@ -96,7 +96,7 @@ export const works = {
       summary:
         "投稿した本音をAIが赤ちゃん語・お母さん語に自動変換してから公開する「エンジニアのための本音吐露SNS」。3人チームで開発し、DB設計・バックエンドAPI全般の実装に加え、PMとして進捗管理も担当。",
       techNote:
-        "チームメンバーの得意分野に合わせてバックエンドをDenoとFastAPIに分担しつつ、投稿文の言い換えにはGemini APIを利用。API仕様を開発初日に合意し、フロント・バックエンドを並行開発できる構成にした。",
+        "チームメンバーの得意分野に合わせてバックエンドをDenoとFastAPIに分担。投稿文の変換はGemini APIを一次経路とし、応答が遅い場合はオープンデータを使った辞書式の単語変換にフォールバックする2段構えにして、投稿の評価にはフルスクラッチのナイーブベイズ分類器を採用した。API仕様を開発初日に合意し、フロント・バックエンドを並行開発できる構成にした。",
       tags: ["React", "TypeScript", "Deno", "PostgreSQL", "FastAPI", "Gemini API"],
       links: {
         github: "https://github.com/engiiro/engiiro-app",

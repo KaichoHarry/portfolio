@@ -20,6 +20,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: siteMeta.title,
   description: siteMeta.description,
+  openGraph: {
+    title: siteMeta.title,
+    description: siteMeta.description,
+    type: "website",
+    locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMeta.title,
+    description: siteMeta.description,
+  },
 };
 
 const THEME_INIT_SCRIPT = `

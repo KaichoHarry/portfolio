@@ -75,7 +75,8 @@ export const skills = {
       years: "1週間",
       level: 2,
       description:
-        "ラクスル株式会社の1weekインターンシップで、社内稼働システムの改修にRubyを使用。守秘義務のため詳細は控えるが、既存コードベースの設計方針や命名規則を読み解き、その流儀に沿った機能追加・修正を行った。",
+        "ラクスルのHack Weekで、実際に稼働している決済システムの「自動消し込み」改善にRuby on Railsで取り組み、例外的な入金パターンを管理する画面を実装(インターンシップアワード受賞)。初めての言語だったが、大きなコードは全体を追わず必要な部分から読み広げ、既存の設計方針や命名規則に沿って機能を追加した。",
+      tools: ["Ruby on Rails"],
     },
     {
       name: "Git / GitHub",
@@ -128,9 +129,10 @@ export const skills = {
     {
       name: "Claude Code",
       icon: "/images/icons/ai/ai_icon_claude.svg",
-      years: "1〜2ヶ月",
+      years: "3ヶ月以上",
       level: 4,
-      description: "設計・コーディング・デザインなど幅広く活用。",
+      description:
+        "設計・コーディング・デザインなど幅広く活用。「AI-shiritori-app」ではほぼ全工程で使い、ラクスルのHack Weekでは初めてのRuby on Railsの実装にも活用。AIに任せた部分も「なぜこのコードなのか」を自分の言葉で説明できる状態にすることを心がけている。",
     },
   ] satisfies SkillItem[],
   otherLabel: "Other Tools & Platforms",
